@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Mortal Kombat</title>
+
+        <link rel="icon" 
+              type="image/png" 
+              href="images/favicon.png">
+
+		<link rel="stylesheet" type="text/css" href="style.css?v=0" media="screen" />
+
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!--this version of jquery necessary for slide plugin !important-->
+
+		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+		<script type="text/javascript" src="js/core.js"></script>
+
+		<script type="text/javascript">
+			var cur_home_slide = 0;
+			var cur_home_time = 3000;
+			var cur_home_int;
+			var home_carousel;
+
+			$(document).ready(function(){
+
+				$('#posts-list').jcarousel({
+					scroll: 5,
+					animation: 500,
+					visible: 5,
+					itemFirstInCallback: carouselTrigger
+				});
+				home_carousel = $("#posts-list").data("jcarousel");
+				
+				cur_home_int = setInterval(swapSlides, cur_home_time);	
+				
+				$('#posts-list > li:first-child').addClass('active');  
+				$('#posts-list > li').hover(function(){
+					slideHover(this);
+						
+					var posts = $('#posts-list > li');
+					clearInterval(cur_home_int);		
+					cur_home_slide = posts.index(this);
+					
+				}, function(){
+					cur_home_int = setInterval(swapSlides, cur_home_time);		
+				});
+			});
+
+			function slideHover(obj){
+				var dataid = $(obj).data("id");	
+				var datastr = "#"+dataid;
+				$(obj).parent().find('.active').removeClass('active');
+				$(obj).addClass('active');
+				$(".posts-title-list li").css("display", "none");
+				$(".posts-title-list").find(datastr).css("display", "block");
+			}
+				
+			function swapSlides(){
+				var posts = $('#posts-list > li');
+				cur_home_slide++;
+				
+				if(posts.length < cur_home_slide + 1){
+					cur_home_slide = 0;
+					home_carousel.scroll(0);
+				}
+					
+				if(cur_home_slide % 5 === 0)
+					home_carousel.next();
+					
+				slideHover($('#posts-list > li:eq('+cur_home_slide+')').get());
+			}
+
+			function carouselTrigger(carousel, item, idx, state) {
+				idx--;
+				
+				if(cur_home_slide >= idx && cur_home_slide < idx + 5){		
+					return;
+				}
+				
+			    var slide = $('#posts-list > li:eq('+idx+')').get();
+			    slideHover(slide);			
+				cur_home_slide = idx;    
+			};
+		</script>
+
+	</head>
+
+
+
+	<body data-spy="scroll" data-offset="15" data-target="#myScrollspy">
+
+
+
+
+
+
+
+		<div id="container" class="container-fluid">
+
+
+
+
+
+
+
+			<div id="navigation" class="row primary-nav"><div class="screen"></div>
+
+				<div class="col-12">
+
+					<div class="container-fluid">
+
+						<div class="row">
+
+							<div class="col-12 col-md-3 logo"><a href="index.html">
+
+								<img class="logoOne" src="images/logo.png">
+
+								<img class="logoTwo" src="images/favicon.png">
+
+							</a></div>
+
+							<div class="menu-trigger-container">
+
+								<div class="menu-trigger">
+									
+									<span></span><span></span>
+
+								</div>
+
+							</div>
+
+							<div id="myScrollspy" class="col-12 offset-md-1 col-md-8 nav navbar">
+								
+								<div class="menu-primary-menu-links-container">
+									
+									<ul class="menu">
+
+										<li><a class="list-group-item list-group-item-action active" href="#home">home<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#about">about<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#posters">posters<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#cast">cast<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#trailers">trailers<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#contact">contact<hr></a></li>
+
+									</ul>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div><!--end navigation-->
+
+
+
+
+
+
+
+			<div id="home" class="row parallax-container">
+
+				<div class="col-12 parallax"><img src="images/Mortal-Kombat-1000-05.jpg"></div>
+
+			</div><!--end home-->
+
+
+
+
+
+
+
+			<div id="about" class="row page parallax-container">
+
+				<div class="col-12">
+
+					<div class="container">
+
+						<div class="row">
+
+							<div class="col-12 offset-md-3 col-md-6 about">
+
+								<div class="container-fluid">
+
+									<div class="row">
+
+										<div class="col-5 title"><img src="images/logo.title.png"></div>
+										
+										<div class="col-7">is a mysterious, intergalactic tournament of ancient martial arts. Shaolin Monk Liu Kang, from Earth, gets invited as a competitor.</div>
+
+										<div class="col-12"><hr></div>
+
+									</div>
+
+								</div>
+
+								<ul>
+									<li><span>Release date:</span> April 16, 2021 (USA)</li>
+									<li><span>Director:</span> Simon McQuoid</li>
+									<li><span>Screenplay:</span> Greg Russo, Sean Catherine Derek, David Callaham, Drew McWeeny, Scott Swan</li>
+									<li><span>Producers:</span> James Wan, Todd Garner, Lawrence Kasanoff</li>
+									<li><span>Production companies:</span> Warner Bros. Pictures, New Line Cinema, Atomic Monster Productions</li>
+								</ul>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="col-12 parallax"><img src="images/MK_g63O8Vo.jpg"></div>
+
+			</div><!--end about-->
+
+
+
+
+
+
+
+			<div id="posters" class="row parallax-container">
+
+				<div class="col-12">
+
+
+
+
+
+
+
+					<div class="container slider_wrap">
+
+						<div class="row posts_slider">
+
+							<div class="col-12" style="padding-left:0;padding-right:0;">
+								
+
+
+								<ul id="posts-list">
+								
+
+									<li data-id="it-1">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/scorpion.subzero.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+								
+
+									<li data-id="it-2">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/all.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+								
+
+									<li data-id="it-3">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/all2.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+								
+
+									<li data-id="it-4">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/mileena.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+								
+
+									<li data-id="it-5">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/jax.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+								
+
+									<li data-id="it-6">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/shang.tsung.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+								
+
+									<li data-id="it-7">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/liu.kang.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+								
+
+									<li data-id="it-8">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/sonya.blade.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+								
+
+									<li data-id="it-9">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/mileena2.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+								
+
+									<li data-id="it-10">
+
+										<div class="thumb">
+
+											<a href="#"><img src="images/Mortal_Kombat_1995.jpg" /></a>
+
+											<em class="triangle"></em>
+
+											<div class="meta"></div>
+
+										</div>
+
+									</li><!--end slide-->
+
+
+
+
+								</ul>
+
+
+
+
+							</div>
+
+						</div><!--end posts_slider-->
+
+					</div><!--end slider_wrap-->
+
+
+
+
+					<div class="container-fluid">
+
+						<div class="row">
+
+							<div class="col-12">
+
+								<ul class="posts-title-list">
+
+									<li id="it-1">
+
+										<a href="#">Scorpion | Sub Zero</a>
+
+									</li>
+
+									<li id="it-2">
+
+										<a href="#">All Characters I</a>
+
+									</li>
+												
+									<li id="it-3">
+
+										<a href="#">All Characters II</a>
+
+									</li>
+
+									<li id="it-4">
+
+										<a href="#">Mileena I</a>
+
+									</li>
+												
+									<li id="it-5">
+
+										<a href="#">Jax</a>
+
+									</li>
+
+									<li id="it-6">
+													
+										<a href="#">Shang Tsung</a>
+
+									</li>
+												
+									<li id="it-7">
+
+										<a href="#">Liu Kang</a>
+
+									</li>
+												
+									<li id="it-8">
+													
+										<a href="http://revive-music.com/2016/08/08/track-by-track-analysis-the-making-of-a-blue-note-record/">Sonya Blade</a>
+												
+									</li>
+												
+									<li id="it-9">
+													
+										<a href="#">Mileena II</a>
+												
+									</li>
+												
+									<li id="it-10">
+													
+										<a href="#">Mortal Kombat 1995</a>
+												
+									</li>
+											
+								</ul>
+
+							</div>
+
+						</div>
+
+					</div><!--end title list-->
+
+
+
+
+
+
+
+				</div>
+
+				<div class="col-12 parallax"><img src="images/ldqwzn5-1613664538951.adj.jpg"></div>
+
+			</div><!--end posters-->
+
+
+
+
+
+
+
+			<div id="cast" class="row page parallax-container">
+
+				<div class="col-12">
+
+					<div class="container cast-container">
+
+						<div class="row">
+
+							<div class="col-6 col-md-ninth cast">
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/joe.jpg">
+
+								</a>
+
+								<h6>joe taslim</h6><span>&#8226;</span><h6>sub zero</h6>
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/subzero.jpg">
+
+								</a>
+
+							</div>
+
+							<div class="col-6 col-md-ninth cast">
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/hiroyuki.jpg">
+
+								</a>
+
+								<h6>hiroyuki sanada</h6><span>&#8226;</span><h6>scorpion</h6>
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/scorpion.jpg">
+
+								</a>
+
+							</div>
+
+							<div class="col-6 col-md-ninth cast">
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/jessica.jpg">
+
+								</a>
+
+								<h6>jessica mcnamee</h6><span>&#8226;</span><h6>sonya</h6>
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/sonya.jpg">
+
+								</a>
+
+							</div>
+
+							<div class="col-6 col-md-ninth cast">
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/sisi.jpg">
+
+								</a>
+
+								<h6>sisi stringer</h6><span>&#8226;</span><h6>mileena</h6>
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/mileena.jpg">
+
+								</a>
+
+							</div>
+
+							<div class="col-6 col-md-ninth cast">
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/lewis.jpg">
+
+								</a>
+
+								<h6>lewis tan</h6><span>&#8226;</span><h6>cole young</h6>
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/coleyoung.jpg">
+
+								</a>
+
+							</div>
+
+							<div class="col-6 col-md-ninth cast">
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/ludi.jpg">
+
+								</a>
+
+								<h6>ludi lin</h6><span>&#8226;</span><h6>liu kang</h6>
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/liukang.png">
+
+								</a>
+
+							</div>
+
+							<div class="col-6 col-md-ninth cast">
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/mehcad.jpg">
+
+								</a>
+
+								<h6>mehcad brooks</h6><span>&#8226;</span><h6>jax</h6>
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/jax.jpg">
+
+								</a>
+
+							</div>
+
+							<div class="col-6 col-md-ninth cast">
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/ng.jpg">
+
+								</a>
+
+								<h6>ng chin han</h6><span>&#8226;</span><h6>shang tsung</h6>
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/shangtsung.jpg">
+
+								</a>
+
+							</div>
+
+							<div class="col-6 col-md-ninth cast">
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/tadanobu.jpg">
+
+								</a>
+
+								<h6>tadanobu asano</h6><span>&#8226;</span><h6>raiden</h6>
+
+								<a href="#" target="_blank">
+								
+									<img src="images/headshots/raiden.jpg">
+
+								</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="col-12 parallax"><img src="images/MK_T1_0061.0.png"></div>
+
+			</div><!--end cast-->
+
+
+
+
+
+
+
+			<div id="trailers" class="row page parallax-container">
+
+				<div class="col-12 trailers">
+
+					<section>
+
+						<video id="sliderVideo" autoplay muted loop>
+							
+							<source src="media/video1.mp4" type="video/mp4">
+
+						</video>
+
+						<ul class="navigation">
+
+							<li>trailers:</li>
+
+							<li class="list-group-item list-group-item-action active" onclick="videoUrl('media/video1.mp4')"><img src="media/thumb1.jpg"></li>
+
+							<li class="list-group-item list-group-item-action" onclick="videoUrl('media/video2.mp4')"><img src="media/thumb2.jpg"></li>
+
+							<li class="list-group-item list-group-item-action" onclick="videoUrl('media/video3.mp4')"><img src="media/thumb3.jpg"></li>
+
+						</ul>
+
+					</section>
+
+					<script type="text/javascript">
+						
+						function videoUrl (xxx){
+							document.getElementById("sliderVideo").src = xxx;
+						}
+
+					</script>
+
+				</div>
+
+				<div class="col-12 parallax"><img src="images/mortal-kombat-film.jpg"></div>
+
+			</div><!--end trailers-->
+
+
+
+
+
+
+
+			<!--<div id="store" class="row page parallax-container">
+
+				<div class="col-12 parallax"><img src="images/MK_FP_0004.jpg"></div>
+
+			</div>end store-->
+
+
+
+
+
+
+
+			<!--<div id="gallery" class="row page parallax-container">
+
+				<div class="col-12 parallax"><img src="images/Mortal-Kombat-1021-Scorpion-Sub-Zero-Fight.jpg"></div>
+
+			</div>end gallery-->
+
+
+
+
+
+
+
+			<div id="contact" class="row page parallax-container">
+
+				<div class="col-12">
+
+					<div class="container">
+
+						<div class="row">
+
+							<div id="myScrollspy" class="col-12 col-md-4 nav navbar">
+								
+								<div class="menu-footer-menu-links-container">
+									
+									<ul class="menu">
+
+										<li><a class="list-group-item list-group-item-action active" href="#home">home<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#about">about<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#posters">posters<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#cast">cast<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#trailers">trailers<hr></a></li>
+
+										<li><a class="list-group-item list-group-item-action" href="#contact">contact<hr></a></li>
+
+									</ul>
+
+								</div>
+
+							</div>
+
+							<div class="col-12 col-md-4 social">
+								
+								<div class="menu-social-menu-links-container">
+									
+									<ul class="menu">
+
+										<li><a href="#" target="_blank">
+											
+											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 viewBox="0 0 504 504" style="enable-background:new 0 0 504 504;" xml:space="preserve">
+											<style type="text/css">
+												.st0{fill:none;}
+											</style>
+											<g>
+												<path d="M1,252.5c0-28.3-0.6-56.7,0.2-85c0.6-23.2,1.7-46.6,8.8-69.1C15.1,82.2,22.2,67,32.9,53.8c19-23.7,43.7-38.6,73.2-45.8
+													c17-4.2,34.3-5.9,51.8-6c60-0.3,120.1-1.2,180.2-0.8c26.3,0.2,52.8,1.9,77.9,11.7c14.6,5.7,28,13.1,40,23.4
+													c24.7,21.1,38.5,48,43.9,79.5c2.2,12.9,3.8,26.1,3.9,39.2c0.7,61.1,1.3,122.2,0.9,183.3c-0.2,26.3-1.9,52.8-11.7,77.9
+													c-5.7,14.6-13.2,27.9-23.4,40c-21,24.5-47.8,38.3-79,43.7c-14,2.4-28.4,3.8-42.7,4c-60.4,0.7-120.9,1.4-181.3,0.9
+													c-26-0.2-52.1-2.1-76.9-11.7c-14.4-5.6-27.7-13-39.6-23.2c-20-17.1-33-38.3-40.3-63.3c-3.8-12.9-6.5-26-6.8-39.5
+													c-1-38.2-2-76.4-2.9-114.6C0.4,252.5,0.7,252.5,1,252.5z M459,165c-1.5-13.6-2.4-25.1-4-36.5c-3.2-22.5-12.1-42-29.9-57.2
+													c-13.2-11.3-28.5-17.8-45-20c-20.9-2.7-42.1-4.2-63.1-4.1c-56.9,0.1-113.8-2.1-170.6,1.8c-8.3,0.6-16.7,1.3-24.8,3.1
+													c-19.7,4.3-36.9,13.1-50.4,29c-11.1,13.1-17.4,28.2-19.8,44.6c-2.7,18.7-4.1,37.7-4.1,56.6c-0.2,53.3,0.3,106.5,0.9,159.8
+													c0.1,11.8,1.3,23.7,3,35.4c3.1,22.5,12.1,42,29.9,57.2c13.2,11.3,28.5,17.8,45,20c20.9,2.7,42.1,4.2,63.1,4.1
+													c56.9-0.1,113.8,2.1,170.6-1.8c8.3-0.6,16.7-1.3,24.8-3.1c19.8-4.3,36.9-13.1,50.4-29c11.1-13.1,17.4-28.2,19.8-44.6
+													c2.7-18.7,4-37.7,4.2-56.6C459.4,270.1,459,216.5,459,165z"/>
+												<path d="M383,252.9c-0.1,71.4-57.6,131.7-133.6,130c-67.7-1.5-128.3-56.8-126.3-134.1c1.7-67.2,56.7-127.7,134.2-125.7
+													C325.3,124.9,382.5,180,383,252.9z M253,170c-45.5-1.4-80.8,38.2-83.2,76.8c-3.3,53.2,40.4,87.1,76.9,89.3
+													c53.3,3.3,87.2-40.5,89.5-77.3C339.6,207.1,295.2,167.9,253,170z"/>
+												<path d="M387.5,88c15.5-1.5,31.4,14.2,30.8,31.8c-0.5,13.7-13.7,30.6-32.7,29.5c-13-0.7-30-13.6-28.9-32.7
+													C357.4,102.8,371.1,86.4,387.5,88z"/>
+												<path class="st0" d="M253,170c42.1-2.1,86.5,37.2,83.2,88.9c-2.4,36.7-36.2,80.6-89.5,77.3c-36.5-2.3-80.1-36.2-76.9-89.3
+													C172.2,208.1,207.5,168.6,253,170z"/>
+											</g>
+											</svg>
+
+										</a></li>
+
+										<li><a href="#" target="_blank">
+											
+											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 viewBox="0 0 415 380" style="enable-background:new 0 0 415 380;" xml:space="preserve">
+											<path d="M328.8,147.2c-2,19.5-3.8,37.6-5.7,55.8c-0.3,2.8-0.8,5.6-0.9,8.4c-0.1,3.4-1.5,4.5-4.9,4.5c-15.8-0.2-31.7-0.1-47.5-0.1
+												c-1.8,0-3.6,0-6.2,0c0,46.4,0,92.3,0,138.5c-27.9,0-55,0-82.9,0c0-46.1,0-92,0-138.4c-14.7,0-28.7,0-43,0c0-22.9,0-45.3,0-68.2
+												c11.7,0,23.1,0,34.6,0c9.7,0,8.6,1.1,8.7-8.4c0.1-16.5-0.3-33,0.4-49.5c0.7-16.5,4.2-32.6,13.3-46.9c10.7-16.8,26.8-25.5,45.7-29.2
+												c9.7-1.9,19.8-2.8,29.7-3.1c17.8-0.5,35.7-0.2,53.5-0.2c1.6,0,3.3,0.2,5.1,0.3c0,22.5,0,44.6,0,67.3c-1.9,0.1-3.9,0.2-5.8,0.3
+												c-13,0.3-26,0.1-38.9,1c-12.4,0.9-18.9,6.8-19.7,19.1c-0.9,15.9-0.2,31.9-0.2,48.8C285.6,147.2,307,147.2,328.8,147.2z"/>
+											</svg>
+
+										</a></li>
+
+										<li><a href="#" target="_blank">
+											
+											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+											<path d="M4.1,419.1c55.5,4.2,105.9-8.8,151.7-43.2c-22.6-2.5-42.8-8.6-60.1-21.8c-17.3-13.2-29.9-29.9-36.6-51.3
+												c15,0.3,29.3,1.7,44.5-2.1c-51.3-16.6-78.6-50.5-81.4-103.8c14.1,6.6,28.7,10.7,45.3,12.1c-46.2-39-55.3-85.2-31.7-140
+												C44.8,78,53,86,61.1,94c52.2,51.3,115.3,78.4,187.9,84.3c1.1,0.1,2.2,0,2.5,0c0-9.3,0.1-18.3,0-27.2c-0.5-44.9,34.6-90.3,84.8-99.5
+												c33.3-6.1,64,1.6,89.6,24.9c5.3,4.9,10.6,6.5,17.2,4c14.8-5.6,29.5-11.2,44.3-16.8c3.7-1.4,7.3-3.2,12.2-5.4
+												c-8.3,23.5-22.8,40.6-40.9,55.4c18.4-1,35.5-7.6,53.5-12.3c-0.9,1.5-1.8,3-2.8,4.3c-12,16.3-25.9,30.9-41.9,43.3
+												c-3.6,2.8-5.2,5.8-5.3,10.4c-0.4,23.2-1.9,46.3-7.1,69c-18.2,79.3-59.1,143.5-126.9,189.6c-36.6,24.8-77.1,40.1-121,45
+												c-44.8,4.9-89.4,4.1-133-9.9c-22.6-7.3-44-17.1-64.6-28.8c-1.6-0.9-3.1-2-4.6-3C4.7,421.1,4.7,420.7,4.1,419.1z"/>
+											</svg>
+
+										</a></li>
+
+										<li><a href="#" target="_blank">
+											
+											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+											<path d="M204.5,346c-16.2,0-32.3,0.1-48.5,0c-14.6-0.2-29.3-0.2-43.9-1.1c-19.4-1.2-38.8-2.4-58-4.9c-20.1-2.6-33.1-14.6-39.6-34
+												c-5.9-17.7-7.2-36-7.5-54.2c-0.5-33.3,0.1-66.6,0.9-99.9c0.4-15.5,2.7-30.8,9-45.3c7.2-16.5,20.2-26,37.6-28.6
+												c13.6-2,27.5-2.5,41.3-3.1c15.6-0.7,31.3-1.1,46.9-1.2c34.5-0.4,69-1.1,103.4-0.6c31.8,0.5,63.5,2.2,95.3,3.9
+												c23.7,1.3,41,15,46.9,38c3.5,13.6,5.9,27.7,6.4,41.7c1.2,30.4,1.6,60.9,1,91.4c-0.4,19-1.5,38.2-7.4,56.7
+												c-7.7,24.2-24.8,35.7-48.8,37.2c-26.2,1.6-52.5,2.5-78.8,3.2c-18.8,0.5-37.6,0.1-56.4,0.1C204.5,345.5,204.5,345.8,204.5,346z
+												 M264.2,210c-0.1-0.5-0.2-1.1-0.3-1.6c-33.7-17.6-67.4-35.1-101.6-53c0,36.3,0,71.7,0,107.8C196.7,245.2,230.5,227.6,264.2,210z"/>
+											</svg>
+
+										</a></li>
+
+									</ul>
+
+								</div>
+
+							</div>
+
+							<div class="col-12 col-md-4 logo">
+
+								<img src="images/favicon.png">
+
+							</div>
+
+							<div class="col-12 offset-md-2 col-md-8 credits">
+
+								<h6>&copy;&nbsp;2021, all rights reserved. | Website by <a href="http://morphcube.com" target="_blank">Morphcube</a></h6>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="col-12 parallax"><img src="images/subzero-crop-1257005-1280x0.jpeg"></div>
+
+			</div><!--end contact-->
+			
+
+
+
+
+
+
+
+		</div><!--end container-->
+		
+
+
+
+
+
+
+
+	</body>
+
+        <script type="text/javascript" src="js/script.min.js"></script>
+
+        <script type="text/javascript" src="js/navigation.animation.js"></script>
+
+        <script type="text/javascript" src="js/slider.js"></script><!---->
+
+        <script type="text/javascript" src="js/materialize/init.js"></script>
+
+        <script type="text/javascript" src="js/materialize/materialize.js"></script>
+
+        <script type="text/javascript" src="js/backtotopBtn.min.js"></script>
+
+<!--loader js-->
+
+        <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+
+        <script type="text/javascript" src="js/main.js"></script>
+
+<!--end loader js-->
+
+</html>
