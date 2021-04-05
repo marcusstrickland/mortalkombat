@@ -9,134 +9,6 @@
   ],
   "creatorBuild" : "34081",
   "files" : {
-    "\/.sass-cache\/4a75908af720957a548295834fb7b59812398e3b\/fonts.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/4a75908af720957a548295834fb7b59812398e3b\/fonts.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/4bd3a4bc46686e7e485c7258f19ff7f2dbbeff15\/fonts.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/4bd3a4bc46686e7e485c7258f19ff7f2dbbeff15\/fonts.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/5d6fb13b6ce1cbc6c41addb4e951c5da4e2f0fcb\/fonts.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/5d6fb13b6ce1cbc6c41addb4e951c5da4e2f0fcb\/fonts.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/exp.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/exp.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/jcarousel.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/jcarousel.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/slider.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/slider.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/slider2.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/slider2.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/slider3.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/slider3.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/style.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/style.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/style2.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/style2.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/style3.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/28297ee00a9fd74c0d897685a888056fdf1db750\/style3.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/615078d0890727107228544dc9cb6f325aec1f7e\/fonts.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/615078d0890727107228544dc9cb6f325aec1f7e\/fonts.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/a8188dca72c989546274b41c40660eb1b52cacfa\/bootstrap.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/a8188dca72c989546274b41c40660eb1b52cacfa\/bootstrap.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/a8188dca72c989546274b41c40660eb1b52cacfa\/jcarousel.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/a8188dca72c989546274b41c40660eb1b52cacfa\/jcarousel.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/a8188dca72c989546274b41c40660eb1b52cacfa\/jcarousel.skeleton.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/a8188dca72c989546274b41c40660eb1b52cacfa\/jcarousel.skeleton.scssc",
-      "oF" : 0
-    },
-    "\/.sass-cache\/aa79d7e6e06f5c9eacba3d50aa38be35db550955\/fonts.scssc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.sass-cache\/aa79d7e6e06f5c9eacba3d50aa38be35db550955\/fonts.scssc",
-      "oF" : 0
-    },
     "\/colors.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -2347,6 +2219,25 @@
       "oAP" : "\/poppins\/Poppins-Thin.ttf",
       "oF" : 0
     },
+    "\/README.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
+      "oF" : 0,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
+    },
     "\/slider.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -2410,7 +2301,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 638970790.88424599,
-    "displayValue" : "okayplayer.slider",
+    "displayValue" : "mortalkombat",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-pink",
     "iconImageWasSetByUser" : 0
