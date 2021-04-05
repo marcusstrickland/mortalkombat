@@ -1,0 +1,44 @@
+html.jcarousel,
+html.jcarousel body {
+  background-color: #1b1b14;
+  color: #f0f0f0;
+  font-family: 'gotham_lightregular';
+  font-size: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased; }
+  html.jcarousel a:link,
+  html.jcarousel a:visited,
+  html.jcarousel a:active,
+  html.jcarousel body a:link,
+  html.jcarousel body a:visited,
+  html.jcarousel body a:active {
+    color: #109fe9;
+    font-family: 'gotham_mediumregular';
+    transition: all .3s ease-in-out; }
+    html.jcarousel a:link:hover,
+    html.jcarousel a:visited:hover,
+    html.jcarousel a:active:hover,
+    html.jcarousel body a:link:hover,
+    html.jcarousel body a:visited:hover,
+    html.jcarousel body a:active:hover {
+      opacity: .85; }
+  html.jcarousel h1,
+  html.jcarousel h2,
+  html.jcarousel h3,
+  html.jcarousel h4,
+  html.jcarousel h5,
+  html.jcarousel h6,
+  html.jcarousel body h1,
+  html.jcarousel body h2,
+  html.jcarousel body h3,
+  html.jcarousel body h4,
+  html.jcarousel body h5,
+  html.jcarousel body h6 {
+    font-family: 'gotham_boldregular';
+    text-transform: uppercase; }
+
+@media screen and (max-width: 480px) {
+  html.jcarousel, html.jcarousel body {
+    font-size: 85%; } }
