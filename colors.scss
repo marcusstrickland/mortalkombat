@@ -1,0 +1,22 @@
+$black:#0f132a;
+$white:#f2e6ec;
+$brown:#462834;
+$blue:#9cf1fe;
+$red:#b12d41;
+$yellow:#f5e471;
+$tan:#e6cca5;
+
+
+
+@mixin gradient {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0d0f07+97,0d0f07+100&1+0,0+100 */
+background: -moz-linear-gradient(top,  rgba(13,15,7,1) 0%, rgba(13,15,7,0.03) 97%, rgba(13,15,7,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(13,15,7,1) 0%,rgba(13,15,7,0.03) 97%,rgba(13,15,7,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(13,15,7,1) 0%,rgba(13,15,7,0.03) 97%,rgba(13,15,7,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0f07', endColorstr='#000d0f07',GradientType=0 ); /* IE6-9 */
+}
+
+//mortal kombat colors
+$black:#0d0f07;
+$white:#e8dcd2;
+$gold:#795635;
+$red:#c0171c;
