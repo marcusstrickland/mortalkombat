@@ -912,6 +912,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/mortal-kombat-poster.preview.jpg" : {
+      "ft" : 16384,
+      "iS" : 1551708,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/mortal-kombat-poster.preview.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/mortal-kombat.jpeg" : {
       "ft" : 16384,
       "iS" : 107676,
